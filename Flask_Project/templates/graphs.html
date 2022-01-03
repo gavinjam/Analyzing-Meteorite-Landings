@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="{{ url_for('static',     filename='template.css') }}">
+</head>
+<body>
+
+<div style="height: 200px;">
+    &nbsp;
+</div>
+
+<header> 
+    <h1>Welcome!</h1>
+    <div class="topnav">
+        <a href="{{ url_for('home') }}">Home</a>
+        <a href="{{ url_for('nums') }}">Numerical Analysis</a>
+        <a class="active" href="{{ url_for('graphs') }}">Graphs</a>
+        <a href="{{ url_for('predict') }}">Prediction</a>
+        <a href="{{ url_for('add_to_data') }}">Add to Data</a>
+    </div>
+</header>
+
+<div class="content">
+    <h3>Graph of Most Popular Meteorite Class Landings in World</h3>
+    <p><img src="http://127.0.0.1:5000/popclassmap"/></p>
+    <img/>
+</div>
+<br/>
+<br/>
+<div class="content">
+    <h3>Graph of Most Rarest Meteorite Class Landings in World</h3>
+    <p><img src="http://127.0.0.1:5000/rareclassmap"/></p>
+    <img/>
+</div>
+<br/>
+<br/>
+<div class="content">
+    <h3>Graph of All Mass Overtime of Meteorite Landings in World</h3>
+    <p><img src="http://127.0.0.1:5000/massovertimemap"/></p>
+</div>
+<br/>
+<br/>
+<div class="content">
+    <h3>Graph of All Masses of Meteorite Landings in World</h3>
+    <p><img src="http://127.0.0.1:5000/allmassesmap"/></p>
+</div>
+<br/>
+<br/>
+<div class="content">
+    <h3>Graph of Biggest Masses of Meteorite Landings in World</h3>
+    <p><img src="http://127.0.0.1:5000/biggermassesmap"/></p>
+</div>
+
+{% extends "main_template.html" %}
+
+</body>
+</html>

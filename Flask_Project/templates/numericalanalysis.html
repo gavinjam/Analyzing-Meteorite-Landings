@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="{{ url_for('static',     filename='template.css') }}">
+</head>
+<body>
+
+<header> 
+    <h1>Welcome!</h1>
+    <div class="topnav">
+        <a href="{{ url_for('home') }}">Home</a>
+        <a class="active" href="{{ url_for('nums') }}">Numerical Analysis</a>
+        <a href="{{ url_for('graphs') }}">Graphs</a>
+        <a href="{{ url_for('predict') }}">Prediction</a>
+        <a href="{{ url_for('add_to_data') }}">Add to Data</a>
+    </div>
+</header>
+
+<div style='height: 200px;'>
+    &nbsp;
+</div>
+
+<div class="content">
+    <h3>Numerial Results</h3>
+    <p>
+       Popular Class Type: {{popular_class}} <br><br>
+       Popular Class Type Location: {{popular_class_loc}} <br><br>
+       Rarest Class Type: {{rarest_class}} <br><br>
+       Average Mass: {{average_mass}}<br><br>
+       Range of Mass: {{range_mass}} <br><br>
+       Biggest Mass: {{big_mass}} <br><br>
+       Smallest Mass: {{small_mass}}
+    </p>
+</div>
+
+{% extends "main_template.html" %}
+
+</body>
+</html>
